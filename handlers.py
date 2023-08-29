@@ -63,3 +63,28 @@ def buyurtma(update:Update,context:CallbackContext):
         text=f"<b>Sahifani tanlang👇🏼</b>",
         reply_markup=InlineKeyboardMarkup(inline_keyboard=keyboards)
     )
+
+
+def kontaktlar(update:Update,context:CallbackContext):
+    btn1 = InlineKeyboardButton(text='instagram', url='https://instagram.com')
+    btn2 = InlineKeyboardButton(text='kanal', url='https://t.me/Stranger070')
+    btn3 = InlineKeyboardButton(
+        text='boglanish', url='https://t.me/Stranger070')
+    btn4 = InlineKeyboardButton(
+        text='tavsiyalash', url='https://t.me/Stranger070')
+    inline_keyboard=[[btn1, btn2], [btn3, btn4]]
+
+    update.callback_query.message.reply_html(
+        text=f"<b>Jasmin restaraunt</b>.\n+998934526621\n +998936252712 \n 🏠 Manzil:  Ул. Амира Темура 202, ориентир «SAMAUTO»\n⏳Ish vaqti:  10:00 - 22:00 (Yopiq) \n👨🏻‍🍳🍢🍲👨🏻‍🍳🍢🍲👨🏻‍🍳🍢🍲👨🏻‍🍳🍢🍲👨🏻‍🍳",
+        reply_markup=InlineKeyboardMarkup(inline_keyboard=inline_keyboard)
+    )
+
+def sozlamalar(update:Update,context:CallbackContext):
+    btn1=InlineKeyboardButton(text="o'zbek",callback_data="o'zbek")
+    btn2 = InlineKeyboardButton(text='русский', callback_data='русский')
+    inline_keyboard=[[btn1],[btn2]]
+
+    update.callback_query.message.reply_html(
+        text=f'tilni tanlang',
+        reply_markup=InlineKeyboardMarkup(inline_keyboard=inline_keyboard)
+    )
