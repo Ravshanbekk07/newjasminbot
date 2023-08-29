@@ -88,3 +88,29 @@ def sozlamalar(update:Update,context:CallbackContext):
         text=f'tilni tanlang',
         reply_markup=InlineKeyboardMarkup(inline_keyboard=inline_keyboard)
     )
+
+def aksiyalar(update:Update,context:CallbackContext):
+    update.callback_query.message.reply_photo(
+        photo=open(file, 'rb'),
+        caption=f"Har bir buyurtmangiz bilan birga Sizga raqamli kupon jo’natamiz🎫  \nUshbu kuponlarni to’plang va bir oyda bir marta o’ynaladigan o’yinda 3️⃣  ta mukofotning 🎁 biriga ega bo’ling! \n✔️Har bir ishtirokchi bizning @jasminsamarkand instagram kanalimizga obuna bo’lishi va xabarlarimizni kuzatishi lozim.❗️\nBuyurtma bering va nafaqat mazzali taom, balki qiziqarli mukofotga ega bo’ling ❗️Buyurtma 👇/start")
+
+file='img..jpg'
+
+def my_booking(update: Update, context: CallbackContext):
+
+    update.callback_query.message.reply_text(
+
+        text='siz hali buyurtma bermadingiz'
+    )
+
+    update.callback_query.message.reply_text(
+
+        text=' 🙂'
+    )
+
+
+def savtchammy(update: Update, context: CallbackContext):
+    update.callback_query.answer(
+
+        text='savatchangiz bosh'
+    )
